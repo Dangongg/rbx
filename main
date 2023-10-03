@@ -1,0 +1,31 @@
+ local pixels = game.Players.LocalPlayer.PlayerGui.PlacePane.PlacePane.wrapper.container.PlaceCount.wrapper.container.placeCount.Text
+local pixelsCount = string.split(pixels," ")[1]
+
+while wait() do
+    if tonumber(pixelsCount) ~= 0 then
+        for i,v in pairs(workspace.Chunks["200"]:GetChildren()) do
+            wait(1)
+            if tonumber(v.Name) < 201 then
+                local args = {
+                        [1] = workspace:WaitForChild("Chunks"):WaitForChild("200"):WaitForChild(tostring(v.Name)),
+                        [2] = 4
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ChangeColor"):FireServer(unpack(args))
+            elseif tonumber(v.Name) < 401 and tonumber(v.Name) > 200 then
+                local args = {
+                        [1] = workspace:WaitForChild("Chunks"):WaitForChild("200"):WaitForChild(tostring(v.Name)),
+                        [2] = 8
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ChangeColor"):FireServer(unpack(args))
+            elseif tonumber(v.Name) < 601 and tonumber(v.Name) > 400 then
+                local args = {
+                        [1] = workspace:WaitForChild("Chunks"):WaitForChild("200"):WaitForChild(tostring(v.Name)),
+                        [2] = 6
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ChangeColor"):FireServer(unpack(args))
+            end
+            print(v.Name)
+        end
+    end
+end
