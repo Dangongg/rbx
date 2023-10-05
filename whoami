@@ -3,19 +3,7 @@
 
 -- Instances:
 
-local Whoami = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local display = Instance.new("TextLabel")
-local age = Instance.new("TextLabel")
-local year = Instance.new("TextLabel")
-local ping = Instance.new("TextLabel")
-local country = Instance.new("TextLabel")
-local countryhelp = Instance.new("TextButton")
-local id = Instance.new("TextLabel")
-local pfp = Instance.new("ImageLabel")
-local TextButton = Instance.new("TextButton")
-local user = Instance.new("TextBox")
-local mini = Instance.new("TextButton")
+local whoamiexp = Instance.new("ScreenGui")
 local help = Instance.new("Frame")
 local close = Instance.new("TextButton")
 local p1 = Instance.new("TextLabel")
@@ -23,155 +11,29 @@ local p2 = Instance.new("TextLabel")
 local p3 = Instance.new("TextLabel")
 local prev = Instance.new("TextButton")
 local nnext = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local display = Instance.new("TextLabel")
+local age = Instance.new("TextLabel")
+local year = Instance.new("TextLabel")
+local country = Instance.new("TextLabel")
+local countryhelp = Instance.new("TextButton")
+local id = Instance.new("TextLabel")
+local pfp = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local user = Instance.new("TextBox")
+local update = Instance.new("TextButton")
+local mini = Instance.new("TextButton")
 local mini_2 = Instance.new("Frame")
 local TextButton_2 = Instance.new("TextButton")
 
 --Properties:
 
-Whoami.Name = "Whoami"
-Whoami.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Whoami.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = Whoami
-Frame.BackgroundColor3 = Color3.fromRGB(145, 145, 145)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.757358193, 0, 0.479015917, 0)
-Frame.Size = UDim2.new(0, 315, 0, 342)
-
-display.Name = "display"
-display.Parent = Frame
-display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-display.BorderColor3 = Color3.fromRGB(0, 0, 0)
-display.BorderSizePixel = 0
-display.Size = UDim2.new(0, 315, 0, 37)
-display.Font = Enum.Font.Arial
-display.Text = "Display:"
-display.TextColor3 = Color3.fromRGB(0, 0, 0)
-display.TextSize = 14.000
-
-age.Name = "age"
-age.Parent = Frame
-age.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-age.BorderColor3 = Color3.fromRGB(0, 0, 0)
-age.BorderSizePixel = 0
-age.Position = UDim2.new(0, 0, 0.312865496, 0)
-age.Size = UDim2.new(0, 200, 0, 50)
-age.Font = Enum.Font.Arial
-age.Text = "Age:"
-age.TextColor3 = Color3.fromRGB(0, 0, 0)
-age.TextSize = 14.000
-
-year.Name = "year"
-year.Parent = Frame
-year.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-year.BorderColor3 = Color3.fromRGB(0, 0, 0)
-year.BorderSizePixel = 0
-year.Position = UDim2.new(0.634920657, 0, 0.312865496, 0)
-year.Size = UDim2.new(0, 115, 0, 50)
-year.Font = Enum.Font.Arial
-year.Text = "Years:"
-year.TextColor3 = Color3.fromRGB(0, 0, 0)
-year.TextSize = 14.000
-
-ping.Name = "ping"
-ping.Parent = Frame
-ping.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ping.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ping.BorderSizePixel = 0
-ping.Position = UDim2.new(0, 0, 0.540935695, 0)
-ping.Size = UDim2.new(0, 141, 0, 50)
-ping.Font = Enum.Font.Arial
-ping.Text = "Ping:"
-ping.TextColor3 = Color3.fromRGB(0, 0, 0)
-ping.TextSize = 14.000
-
-country.Name = "country"
-country.Parent = Frame
-country.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-country.BorderColor3 = Color3.fromRGB(0, 0, 0)
-country.BorderSizePixel = 0
-country.Position = UDim2.new(0, 0, 0.751461983, 0)
-country.Size = UDim2.new(0, 117, 0, 50)
-country.Font = Enum.Font.Arial
-country.Text = "Country:"
-country.TextColor3 = Color3.fromRGB(0, 0, 0)
-country.TextSize = 14.000
-
-countryhelp.Name = "countryhelp"
-countryhelp.Parent = Frame
-countryhelp.BackgroundColor3 = Color3.fromRGB(240, 255, 240)
-countryhelp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-countryhelp.BorderSizePixel = 0
-countryhelp.Position = UDim2.new(0.371428579, 0, 0.751461983, 0)
-countryhelp.Size = UDim2.new(0, 24, 0, 50)
-countryhelp.Font = Enum.Font.SourceSans
-countryhelp.Text = "(?)"
-countryhelp.TextColor3 = Color3.fromRGB(0, 0, 0)
-countryhelp.TextScaled = true
-countryhelp.TextSize = 14.000
-countryhelp.TextWrapped = true
-
-id.Name = "id"
-id.Parent = Frame
-id.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-id.BorderColor3 = Color3.fromRGB(0, 0, 0)
-id.BorderSizePixel = 0
-id.Position = UDim2.new(0, 0, 0.204678357, 0)
-id.Size = UDim2.new(0, 315, 0, 37)
-id.Font = Enum.Font.Arial
-id.Text = "UserId:"
-id.TextColor3 = Color3.fromRGB(0, 0, 0)
-id.TextSize = 14.000
-
-pfp.Name = "pfp"
-pfp.Parent = Frame
-pfp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-pfp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-pfp.BorderSizePixel = 0
-pfp.Position = UDim2.new(0.501587331, 0, 0.540935695, 0)
-pfp.Size = UDim2.new(0, 140, 0, 122)
-pfp.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
-
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(116, 116, 116)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0, 0, 0.950292408, 0)
-TextButton.Size = UDim2.new(0, 315, 0, 17)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Close"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
-
-user.Name = "user"
-user.Parent = Frame
-user.BackgroundColor3 = Color3.fromRGB(89, 0, 0)
-user.BorderColor3 = Color3.fromRGB(0, 0, 0)
-user.BorderSizePixel = 0
-user.Position = UDim2.new(0, 0, 0.108187132, 0)
-user.Size = UDim2.new(0, 315, 0, 33)
-user.Font = Enum.Font.SourceSans
-user.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-user.PlaceholderText = "Enter their username"
-user.Text = ""
-user.TextColor3 = Color3.fromRGB(255, 255, 255)
-user.TextSize = 14.000
-
-mini.Name = "mini"
-mini.Parent = Frame
-mini.BackgroundColor3 = Color3.fromRGB(255, 145, 55)
-mini.BorderColor3 = Color3.fromRGB(0, 0, 0)
-mini.BorderSizePixel = 0
-mini.Position = UDim2.new(0, 0, -0.0497076027, 0)
-mini.Size = UDim2.new(0, 315, 0, 17)
-mini.Font = Enum.Font.SourceSans
-mini.Text = "Minimize"
-mini.TextColor3 = Color3.fromRGB(0, 0, 0)
-mini.TextSize = 14.000
+whoamiexp.Name = "whoamiexp"
+whoamiexp.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+whoamiexp.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 help.Name = "help"
-help.Parent = Whoami
+help.Parent = whoamiexp
 help.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 help.BorderColor3 = Color3.fromRGB(0, 0, 0)
 help.BorderSizePixel = 0
@@ -258,21 +120,157 @@ nnext.Text = "-->>"
 nnext.TextColor3 = Color3.fromRGB(0, 0, 0)
 nnext.TextSize = 14.000
 
+Frame.Parent = whoamiexp
+Frame.BackgroundColor3 = Color3.fromRGB(145, 145, 145)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.757358193, 0, 0.479015917, 0)
+Frame.Size = UDim2.new(0, 315, 0, 342)
+
+display.Name = "display"
+display.Parent = Frame
+display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+display.BorderColor3 = Color3.fromRGB(0, 0, 0)
+display.BorderSizePixel = 0
+display.Size = UDim2.new(0, 315, 0, 37)
+display.Font = Enum.Font.Arial
+display.Text = "Display:"
+display.TextColor3 = Color3.fromRGB(0, 0, 0)
+display.TextSize = 14.000
+
+age.Name = "age"
+age.Parent = Frame
+age.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+age.BorderColor3 = Color3.fromRGB(0, 0, 0)
+age.BorderSizePixel = 0
+age.Position = UDim2.new(0, 0, 0.312865496, 0)
+age.Size = UDim2.new(0, 200, 0, 50)
+age.Font = Enum.Font.Arial
+age.Text = "Age:"
+age.TextColor3 = Color3.fromRGB(0, 0, 0)
+age.TextSize = 14.000
+
+year.Name = "year"
+year.Parent = Frame
+year.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+year.BorderColor3 = Color3.fromRGB(0, 0, 0)
+year.BorderSizePixel = 0
+year.Position = UDim2.new(0.634920657, 0, 0.312865496, 0)
+year.Size = UDim2.new(0, 115, 0, 50)
+year.Font = Enum.Font.Arial
+year.Text = "Years:"
+year.TextColor3 = Color3.fromRGB(0, 0, 0)
+year.TextSize = 14.000
+
+country.Name = "country"
+country.Parent = Frame
+country.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+country.BorderColor3 = Color3.fromRGB(0, 0, 0)
+country.BorderSizePixel = 0
+country.Position = UDim2.new(0, 0, 0.751461983, 0)
+country.Size = UDim2.new(0, 117, 0, 50)
+country.Font = Enum.Font.Arial
+country.Text = "Country:"
+country.TextColor3 = Color3.fromRGB(0, 0, 0)
+country.TextSize = 14.000
+
+countryhelp.Name = "countryhelp"
+countryhelp.Parent = Frame
+countryhelp.BackgroundColor3 = Color3.fromRGB(240, 255, 240)
+countryhelp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+countryhelp.BorderSizePixel = 0
+countryhelp.Position = UDim2.new(0.371428579, 0, 0.751461983, 0)
+countryhelp.Size = UDim2.new(0, 24, 0, 50)
+countryhelp.Font = Enum.Font.SourceSans
+countryhelp.Text = "(?)"
+countryhelp.TextColor3 = Color3.fromRGB(0, 0, 0)
+countryhelp.TextScaled = true
+countryhelp.TextSize = 14.000
+countryhelp.TextWrapped = true
+
+id.Name = "id"
+id.Parent = Frame
+id.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+id.BorderColor3 = Color3.fromRGB(0, 0, 0)
+id.BorderSizePixel = 0
+id.Position = UDim2.new(0, 0, 0.204678357, 0)
+id.Size = UDim2.new(0, 315, 0, 37)
+id.Font = Enum.Font.Arial
+id.Text = "UserId:"
+id.TextColor3 = Color3.fromRGB(0, 0, 0)
+id.TextSize = 14.000
+
+pfp.Name = "pfp"
+pfp.Parent = Frame
+pfp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pfp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+pfp.BorderSizePixel = 0
+pfp.Position = UDim2.new(0.501587331, 0, 0.540935695, 0)
+pfp.Size = UDim2.new(0, 140, 0, 122)
+pfp.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, 0.950292408, 0)
+TextButton.Size = UDim2.new(0, 315, 0, 17)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Close"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+user.Name = "user"
+user.Parent = Frame
+user.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+user.BorderColor3 = Color3.fromRGB(0, 0, 0)
+user.BorderSizePixel = 0
+user.Position = UDim2.new(0, 0, 0.108187132, 0)
+user.Size = UDim2.new(0, 315, 0, 33)
+user.Font = Enum.Font.SourceSans
+user.PlaceholderText = "Enter Username"
+user.Text = ""
+user.TextColor3 = Color3.fromRGB(255, 255, 255)
+user.TextSize = 14.000
+
+update.Name = "update"
+update.Parent = Frame
+update.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+update.BorderColor3 = Color3.fromRGB(0, 0, 0)
+update.BorderSizePixel = 0
+update.Position = UDim2.new(0, 0, 0.558479548, 0)
+update.Size = UDim2.new(0, 141, 0, 50)
+update.Font = Enum.Font.SourceSans
+update.Text = "Update display"
+update.TextColor3 = Color3.fromRGB(0, 0, 0)
+update.TextSize = 20.000
+update.TextWrapped = true
+
+mini.Name = "mini"
+mini.Parent = Frame
+mini.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+mini.BorderColor3 = Color3.fromRGB(0, 0, 0)
+mini.BorderSizePixel = 0
+mini.Position = UDim2.new(0, 0, -0.0497076027, 0)
+mini.Size = UDim2.new(0, 315, 0, 17)
+mini.Font = Enum.Font.SourceSans
+mini.Text = "Minimize"
+mini.TextColor3 = Color3.fromRGB(0, 0, 0)
+mini.TextSize = 14.000
+
 mini_2.Name = "mini"
-mini_2.Parent = Whoami
-mini_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mini_2.Parent = whoamiexp
+mini_2.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
 mini_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 mini_2.BorderSizePixel = 0
-mini_2.Position = UDim2.new(0.663316607, 0, 0.471780032, 0)
-mini_2.Size = UDim2.new(0, 106, 0, 39)
-mini_2.Visible = false
+mini_2.Position = UDim2.new(0.613065302, 0, 0.454413861, 0)
+mini_2.Size = UDim2.new(0, 172, 0, 50)
 
 TextButton_2.Parent = mini_2
-TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 255, 38)
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
 TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(-0.00858609192, 0, 0.0496794879, 0)
-TextButton_2.Size = UDim2.new(0, 54, 0, 34)
+TextButton_2.Size = UDim2.new(0, 63, 0, 50)
 TextButton_2.Font = Enum.Font.SourceSans
 TextButton_2.Text = "+"
 TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -282,132 +280,7 @@ TextButton_2.TextWrapped = true
 
 -- Scripts:
 
-local function AEAWTN_fake_script() -- Frame.Main 
-	local script = Instance.new('LocalScript', Frame)
-
-	local player
-	
-	
-	
-	--frame variables
-	local f = script.Parent --
-	local ping = f.ping --
-	local yr =f.year --
-	local age = f.age --
-	local display = f.display --
-	local loc = f.country
-	local user = f.user --
-	local id = f.id --
-	local pfp = f.pfp --
-	local h = f.countryhelp --
-	
-	--game variables
-	
-	local localizationService = game:GetService("LocalizationService")
-	--\game variables
-	
-	--code
-	
-	wait(1)
-	print("loaded!!")
-	player = game.Players.LocalPlayer
-	local playerage = player.AccountAge
-	local name = player.Name
-	local playeryear = math.round((playerage/375))
-	local playerid = player.UserId
-	
-	--img
-	local thumbType = Enum.ThumbnailType.AvatarBust
-	local thumbSize = Enum.ThumbnailSize.Size150x150
-	local content = game.Players:GetUserThumbnailAsync(playerid, thumbType, thumbSize)
-	--\img
-	
-	
-	age.Text = "Age: "..playerage
-	yr.Text = "Years: "..playeryear
-	user.Text = "Username: "..name
-	display.Text = "Display: "..player.DisplayName
-	loc.Text = "Country: "..localizationService:GetCountryRegionForPlayerAsync(player)
-	id.Text = "UserId: "..playerid
-	pfp.Image = content
-	
-	
-	h.MouseButton1Up:Connect(function()
-		f.Parent.help.Visible = true
-	end)
-	
-	game.ReplicatedStorage.OpenWAI.OnClientEvent:Connect(function()
-		f.Visible = true
-	end)
-	
-	--\code
-	
-	user.Changed:Connect(function()
-		player = game.Players:FindFirstChild(user.Text)
-		local playerage = player.AccountAge
-		local name = player.Name
-		local playeryear = math.round((playerage/375))
-		local playerid = player.UserId
-		local thumbType = Enum.ThumbnailType.AvatarBust
-		local thumbSize = Enum.ThumbnailSize.Size150x150
-		local content = game.Players:GetUserThumbnailAsync(playerid, thumbType, thumbSize)
-		age.Text = "Age: "..playerage
-		yr.Text = "Years: "..playeryear
-		user.Text = "Username: "..name
-		display.Text = "Display: "..player.DisplayName
-		loc.Text = "Country: "..localizationService:GetCountryRegionForPlayerAsync(player)
-		id.Text = "UserId: "..playerid
-		pfp.Image = content
-	end)
-end
-coroutine.wrap(AEAWTN_fake_script)()
-local function KBYM_fake_script() -- Frame.Ping 
-	local script = Instance.new('LocalScript', Frame)
-
-	local player;
-	local p = script.Parent.ping
-	local localizationService = game:GetService("LocalizationService")
-	
-	wait(3)
-	
-	player = game.Players.LocalPlayer
-	
-	
-	local ping = player:GetNetworkPing()
-	p.Text = "$WAIT"
-	
-	script.Parent.user.Changed:Connect(function()
-		player = game.Players:FindFirstChild(script.Parent.user.Text)
-	end)
-	
-	while wait(1) do
-		ping = player:GetNetworkPing()
-		p.Text = "Ping: "..tostring(ping)
-	end
-	
-end
-coroutine.wrap(KBYM_fake_script)()
-local function MNMX_fake_script() -- TextButton.close 
-	local script = Instance.new('LocalScript', TextButton)
-
-	local b = script.Parent
-	local f = b.Parent
-	
-	b.MouseButton1Up:Connect(function()
-		f.Parent:Destroy()
-	end)
-end
-coroutine.wrap(MNMX_fake_script)()
-local function KITG_fake_script() -- mini.LocalScript 
-	local script = Instance.new('LocalScript', mini)
-
-	script.Parent.MouseButton1Up:Connect(function()
-		script.Parent.Parent.Visible = false
-		script.Parent.Parent.Parent.mini.Visible = true
-	end)
-end
-coroutine.wrap(KITG_fake_script)()
-local function PWKA_fake_script() -- help.LocalScript 
+local function GZVRDD_fake_script() -- help.LocalScript 
 	local script = Instance.new('LocalScript', help)
 
 	local position = 1
@@ -487,17 +360,116 @@ local function PWKA_fake_script() -- help.LocalScript
 	end)
 	
 end
-coroutine.wrap(PWKA_fake_script)()
-local function AQWDHS_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
+coroutine.wrap(GZVRDD_fake_script)()
+local function RSDTD_fake_script() -- Frame.Main 
+	local script = Instance.new('LocalScript', Frame)
 
-	script.Parent.MouseButton1Up:Connect(function()
-		script.Parent.Parent.Visible = false
-		script.Parent.Parent.Parent.Frame.Visible = true
+	local player
+	
+	
+	
+	--frame variables
+	local f = script.Parent
+	local ping = f.update
+	local yr =f.year --
+	local age = f.age --
+	local display = f.display --
+	local loc = f.country
+	local user = f.user --
+	local id = f.id
+	local pfp = f.pfp
+	local h = f.countryhelp
+	
+	--game variables
+	
+	local localizationService = game:GetService("LocalizationService")
+	--\game variables
+	
+	--code
+	
+	wait(1)
+	print("whoami injected")
+	player = game.Players.LocalPlayer
+	
+	
+	
+	
+	local function update()
+		local playerage = player.AccountAge
+		local name = player.Name
+		local playeryear = math.round((playerage/375))
+		local playerid = player.UserId
+		--img
+		local thumbType = Enum.ThumbnailType.AvatarBust
+		local thumbSize = Enum.ThumbnailSize.Size150x150
+		local content = game.Players:GetUserThumbnailAsync(playerid, thumbType, thumbSize)
+		--\img
+		age.Text = "Age: "..playerage
+		yr.Text = "Years: "..playeryear
+		user.Text = "Username: "..name
+		display.Text = "Display: "..player.DisplayName
+		loc.Text = "Country: "..localizationService:GetCountryRegionForPlayerAsync(player)
+		id.Text = "UserId: "..playerid
+		pfp.Image = content
+	end
+	
+	update()
+	
+	h.MouseButton1Up:Connect(function()
+		f.Parent.help.Visible = true
+	end)
+	
+	
+	
+	--\code
+	
+	ping.MouseButton1Up:Connect(function()
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if user.Text == v then
+				player = game.Players:FindFirstChild(user.Text)
+				update()
+				break
+			end
+		end
 	end)
 end
-coroutine.wrap(AQWDHS_fake_script)()
-local function ZRNMU_fake_script() -- mini_2.DragScript 
+coroutine.wrap(RSDTD_fake_script)()
+local function GJLJSJK_fake_script() -- TextButton.close 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local b = script.Parent
+	local f = b.Parent
+	
+	b.MouseButton1Up:Connect(function()
+		f.Visible = false
+	end)
+end
+coroutine.wrap(GJLJSJK_fake_script)()
+local function JLOPSA_fake_script() -- mini.minimize 
+	local script = Instance.new('LocalScript', mini)
+
+	local b = script.Parent
+	local f = b.Parent
+	
+	b.MouseButton1Up:Connect(function()
+		f.Visible = false
+		f.Parent.mini.Visible = true
+	end)
+end
+coroutine.wrap(JLOPSA_fake_script)()
+local function SWTD_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	local m = script.Parent.Parent
+	local s = m.Parent.Frame
+	
+	script.Parent.MouseButton1Up:Connect(function()
+		m.Visible = false
+		s.Visible = true
+	end)
+end
+coroutine.wrap(SWTD_fake_script)()
+local function AQPDPJ_fake_script() -- mini_2.DragScript 
 	local script = Instance.new('LocalScript', mini_2)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -507,7 +479,7 @@ local function ZRNMU_fake_script() -- mini_2.DragScript
 	local UIS = game:GetService('UserInputService')
 	local frame = script.Parent
 	local dragToggle = nil
-	local dragSpeed = 0.25
+	local dragSpeed = 0.3
 	local dragStart = nil
 	local startPos = nil
 	
@@ -540,4 +512,4 @@ local function ZRNMU_fake_script() -- mini_2.DragScript
 	end)
 	
 end
-coroutine.wrap(ZRNMU_fake_script)()
+coroutine.wrap(AQPDPJ_fake_script)()
