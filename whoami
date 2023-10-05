@@ -1,0 +1,543 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Whoami = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local display = Instance.new("TextLabel")
+local age = Instance.new("TextLabel")
+local year = Instance.new("TextLabel")
+local ping = Instance.new("TextLabel")
+local country = Instance.new("TextLabel")
+local countryhelp = Instance.new("TextButton")
+local id = Instance.new("TextLabel")
+local pfp = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local user = Instance.new("TextBox")
+local mini = Instance.new("TextButton")
+local help = Instance.new("Frame")
+local close = Instance.new("TextButton")
+local p1 = Instance.new("TextLabel")
+local p2 = Instance.new("TextLabel")
+local p3 = Instance.new("TextLabel")
+local prev = Instance.new("TextButton")
+local nnext = Instance.new("TextButton")
+local mini_2 = Instance.new("Frame")
+local TextButton_2 = Instance.new("TextButton")
+
+--Properties:
+
+Whoami.Name = "Whoami"
+Whoami.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Whoami.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Whoami
+Frame.BackgroundColor3 = Color3.fromRGB(145, 145, 145)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.757358193, 0, 0.479015917, 0)
+Frame.Size = UDim2.new(0, 315, 0, 342)
+
+display.Name = "display"
+display.Parent = Frame
+display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+display.BorderColor3 = Color3.fromRGB(0, 0, 0)
+display.BorderSizePixel = 0
+display.Size = UDim2.new(0, 315, 0, 37)
+display.Font = Enum.Font.Arial
+display.Text = "Display:"
+display.TextColor3 = Color3.fromRGB(0, 0, 0)
+display.TextSize = 14.000
+
+age.Name = "age"
+age.Parent = Frame
+age.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+age.BorderColor3 = Color3.fromRGB(0, 0, 0)
+age.BorderSizePixel = 0
+age.Position = UDim2.new(0, 0, 0.312865496, 0)
+age.Size = UDim2.new(0, 200, 0, 50)
+age.Font = Enum.Font.Arial
+age.Text = "Age:"
+age.TextColor3 = Color3.fromRGB(0, 0, 0)
+age.TextSize = 14.000
+
+year.Name = "year"
+year.Parent = Frame
+year.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+year.BorderColor3 = Color3.fromRGB(0, 0, 0)
+year.BorderSizePixel = 0
+year.Position = UDim2.new(0.634920657, 0, 0.312865496, 0)
+year.Size = UDim2.new(0, 115, 0, 50)
+year.Font = Enum.Font.Arial
+year.Text = "Years:"
+year.TextColor3 = Color3.fromRGB(0, 0, 0)
+year.TextSize = 14.000
+
+ping.Name = "ping"
+ping.Parent = Frame
+ping.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ping.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ping.BorderSizePixel = 0
+ping.Position = UDim2.new(0, 0, 0.540935695, 0)
+ping.Size = UDim2.new(0, 141, 0, 50)
+ping.Font = Enum.Font.Arial
+ping.Text = "Ping:"
+ping.TextColor3 = Color3.fromRGB(0, 0, 0)
+ping.TextSize = 14.000
+
+country.Name = "country"
+country.Parent = Frame
+country.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+country.BorderColor3 = Color3.fromRGB(0, 0, 0)
+country.BorderSizePixel = 0
+country.Position = UDim2.new(0, 0, 0.751461983, 0)
+country.Size = UDim2.new(0, 117, 0, 50)
+country.Font = Enum.Font.Arial
+country.Text = "Country:"
+country.TextColor3 = Color3.fromRGB(0, 0, 0)
+country.TextSize = 14.000
+
+countryhelp.Name = "countryhelp"
+countryhelp.Parent = Frame
+countryhelp.BackgroundColor3 = Color3.fromRGB(240, 255, 240)
+countryhelp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+countryhelp.BorderSizePixel = 0
+countryhelp.Position = UDim2.new(0.371428579, 0, 0.751461983, 0)
+countryhelp.Size = UDim2.new(0, 24, 0, 50)
+countryhelp.Font = Enum.Font.SourceSans
+countryhelp.Text = "(?)"
+countryhelp.TextColor3 = Color3.fromRGB(0, 0, 0)
+countryhelp.TextScaled = true
+countryhelp.TextSize = 14.000
+countryhelp.TextWrapped = true
+
+id.Name = "id"
+id.Parent = Frame
+id.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+id.BorderColor3 = Color3.fromRGB(0, 0, 0)
+id.BorderSizePixel = 0
+id.Position = UDim2.new(0, 0, 0.204678357, 0)
+id.Size = UDim2.new(0, 315, 0, 37)
+id.Font = Enum.Font.Arial
+id.Text = "UserId:"
+id.TextColor3 = Color3.fromRGB(0, 0, 0)
+id.TextSize = 14.000
+
+pfp.Name = "pfp"
+pfp.Parent = Frame
+pfp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pfp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+pfp.BorderSizePixel = 0
+pfp.Position = UDim2.new(0.501587331, 0, 0.540935695, 0)
+pfp.Size = UDim2.new(0, 140, 0, 122)
+pfp.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(116, 116, 116)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, 0.950292408, 0)
+TextButton.Size = UDim2.new(0, 315, 0, 17)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Close"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+user.Name = "user"
+user.Parent = Frame
+user.BackgroundColor3 = Color3.fromRGB(89, 0, 0)
+user.BorderColor3 = Color3.fromRGB(0, 0, 0)
+user.BorderSizePixel = 0
+user.Position = UDim2.new(0, 0, 0.108187132, 0)
+user.Size = UDim2.new(0, 315, 0, 33)
+user.Font = Enum.Font.SourceSans
+user.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+user.PlaceholderText = "Enter their username"
+user.Text = ""
+user.TextColor3 = Color3.fromRGB(255, 255, 255)
+user.TextSize = 14.000
+
+mini.Name = "mini"
+mini.Parent = Frame
+mini.BackgroundColor3 = Color3.fromRGB(255, 145, 55)
+mini.BorderColor3 = Color3.fromRGB(0, 0, 0)
+mini.BorderSizePixel = 0
+mini.Position = UDim2.new(0, 0, -0.0497076027, 0)
+mini.Size = UDim2.new(0, 315, 0, 17)
+mini.Font = Enum.Font.SourceSans
+mini.Text = "Minimize"
+mini.TextColor3 = Color3.fromRGB(0, 0, 0)
+mini.TextSize = 14.000
+
+help.Name = "help"
+help.Parent = Whoami
+help.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+help.BorderColor3 = Color3.fromRGB(0, 0, 0)
+help.BorderSizePixel = 0
+help.Position = UDim2.new(0.357501805, 0, 0.263386399, 0)
+help.Size = UDim2.new(0, 397, 0, 409)
+help.Visible = false
+
+close.Name = "close"
+close.Parent = help
+close.BackgroundColor3 = Color3.fromRGB(255, 71, 71)
+close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.211586908, 0, 0.938875318, 0)
+close.Size = UDim2.new(0, 228, 0, 25)
+close.Font = Enum.Font.SourceSans
+close.Text = "Close"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+
+p1.Name = "p1"
+p1.Parent = help
+p1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+p1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+p1.BorderSizePixel = 0
+p1.Size = UDim2.new(0, 397, 0, 384)
+p1.Font = Enum.Font.SourceSansBold
+p1.Text = "US: United States, GB: United Kingdom, CA: Canada, AF: Afghanistan, AX: Aland Islands, AL: Albania, DZ: Algeria, AS: American Samoa, AD: Andorra, AO: Angola, AI: Anguilla, AQ: Antarctica, AG: Antigua and Barbuda, AR: Argentina, AM: Armenia, AW: Aruba, AU: Australia, AT: Austria, AZ: Azerbaijan, BS: Bahamas, BH: Bahrain, BD: Bangladesh, BB: Barbados, BY: Belarus, BE: Belgium, BZ: Belize, BJ: Benin, BM: Bermuda, BT: Bhutan, BO: Bolivia, BQ: Bonaire, Saint Eustatius and Saba, BA: Bosnia and Herzegovina, BW: Botswana, BV: Bouvet Island, BR: Brazil, IO: British Indian Ocean Territory, BN: Brunei Darussalam, BG: Bulgaria, BF: Burkina Faso, BI: Burundi, KH: Cambodia, CM: Cameroon, CV: Cape Verde, KY: Cayman Islands, CF: Central African Republic, TD: Chad, CL: Chile, CN: China, CX: Christmas Island, CC: Cocos Islands, CO: Colombia, KM: Comoros, CG: Congo, CD: Congo (DRC), CK: Cook Islands, CR: Costa Rica, CI: Ivory Coast, HR: Croatia, CW: Curaçao, CY: Cyprus, CZ: Czech Republic, DK: Denmark, DJ: Djibouti, DM: Dominica, DO: Dominican Republic, EC: Ecuador, EG: Egypt, SV: El Salvador, GQ: Equatorial Guinea, ER: Eritrea, EE: Estonia, ET: Ethiopia, FK: Falkland Islands (Malvinas), FO: Faroe Islands, FJ: Fiji, FI: Finland, FR: France, GF: French Guiana, PF: French Polynesia, TF: French Southern Territories, GA: Gabon, GM: Gambia, GE: Georgia, DE: German"
+p1.TextColor3 = Color3.fromRGB(0, 0, 0)
+p1.TextScaled = true
+p1.TextSize = 14.000
+p1.TextWrapped = true
+
+p2.Name = "p2"
+p2.Parent = help
+p2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+p2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+p2.BorderSizePixel = 0
+p2.Size = UDim2.new(0, 397, 0, 384)
+p2.Visible = false
+p2.Font = Enum.Font.SourceSansBold
+p2.Text = "GH: Ghana, GI: Gibraltar, GR: Greece, GL: Greenland, GD: Grenada, GP: Guadeloupe, GU: Guam, GT: Guatemala, GG: Guernsey, GN: Guinea, GW: Guinea-Bissau, GY: Guyana, HT: Haiti, HM: Heard Island and the McDonald Islands, VA: Holy See, HN: Honduras, HK: Hong Kong, HU: Hungary, IS: Iceland, IN: India, ID: Indonesia, IQ: Iraq, IE: Ireland, IM: Isle of Man, IL: Israel, IT: Italy, JM: Jamaica, JP: Japan, JE: Jersey, JO: Jordan, KZ: Kazakhstan, KE: Kenya, KI: Kiribati, KR: Korea, KW: Kuwait, KG: Kyrgyzstan, LA: Laos, LV: Latvia, LB: Lebanon, LS: Lesotho, LR: Liberia, LY: Libya, LI: Liechtenstein, LT: Lithuania, LU: Luxembourg, MO: Macao, MK: Macedonia, MG: Madagascar, MW: Malawi, MY: Malaysia, MV: Maldives, ML: Mali, MT: Malta, MH: Marshall Islands, MQ: Martinique, MR: Mauritania, MU: Mauritius, YT: Mayotte, MX: Mexico, FM: Micronesia, MD: Moldova, MC: Monaco, MN: Mongolia, ME: Montenegro, MS: Montserrat, MA: Morocco, MZ: Mozambique, MM: Myanmar, NA: Namibia, NR: Nauru, NP: Nepal, NL: Netherlands, AN: Netherlands Antilles, NC: New Caledonia, NZ: New Zealand, NI: Nicaragua, NE: Niger, NG: Nigeria, NU: Niue, NF: Norfolk Island, MP: Northern Mariana Islands, NO: Norway, OM: Oman"
+p2.TextColor3 = Color3.fromRGB(0, 0, 0)
+p2.TextScaled = true
+p2.TextSize = 14.000
+p2.TextWrapped = true
+
+p3.Name = "p3"
+p3.Parent = help
+p3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+p3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+p3.BorderSizePixel = 0
+p3.Size = UDim2.new(0, 397, 0, 384)
+p3.Visible = false
+p3.Font = Enum.Font.SourceSansBold
+p3.Text = "PK: Pakistan, PW: Palau, PS: Palestine, PA: Panama, PG: Papua New Guinea, PY: Paraguay, PE: Peru, PH: Philippines, PN: Pitcairn Islands, PL: Poland, PT: Portugal, PR: Puerto Rico, QA: Qatar, RE: Reunion, RO: Romania, RU: Russian Federation, RW: Rwanda, BL: Saint Barthelemy, SH: Saint Helena, Ascension and Tristan da Cunha, KN: Saint Kitts and Nevis, LC: Saint Lucia, MF: Saint Martin, PM: Saint Pierre and Miquelon, VC: Saint Vincent and the Grenadines, WS: Samoa, SM: San Marino, ST: Sao Tome and Principe, SA: Saudi Arabia, SN: Senegal, RS: Serbia, SC: Seychelles, SL: Sierra Leone, SG: Singapore, SX: Sint Maarten, SK: Slovakia, SI: Slovenia, SB: Solomon Islands, SO: Somalia, ZA: South Africa, GS: South Georgia and the South Sandwich Islands, SS: South Sudan, ES: Spain, LK: Sri Lanka, SR: Suriname, SJ: Svalbard and Jan Mayen, SZ: Swaziland, SE: Sweden, CH: Switzerland, TW: Taiwan, TJ: Tajikistan, TZ: Tanzania, TH: Thailand, TL: Timor-leste, TG: Togo, TK: Tokelau, TO: Tonga, TT: Trinidad and Tobago, TN: Tunisia, TR: Turkey, TM: Turkmenistan, TC: Turks and Caicos Islands, TV: Tuvalu, UG: Uganda, UA: Ukraine, AE: United Arab Emirates, UM: United States Minor Outlying Islands, UY: Uruguay, UZ: Uzbekistan, VU: Vanuatu, VE: Venezuela, VN: Vietnam, VG: Virgin Islands (British), VI: Virgin Islands (US), WF: Wallis and Futuna, EH: Western Sahara, YE: Yemen, ZM: Zambia, ZW: Zimbabwe, CU: Cuba, IR: Iran, SY: Syria, KP: North Korea"
+p3.TextColor3 = Color3.fromRGB(0, 0, 0)
+p3.TextScaled = true
+p3.TextSize = 14.000
+p3.TextWrapped = true
+
+prev.Name = "prev"
+prev.Parent = help
+prev.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+prev.BorderColor3 = Color3.fromRGB(0, 0, 0)
+prev.BorderSizePixel = 0
+prev.Position = UDim2.new(0, 0, 0.938875318, 0)
+prev.Size = UDim2.new(0, 84, 0, 25)
+prev.Font = Enum.Font.SourceSans
+prev.Text = "<<---"
+prev.TextColor3 = Color3.fromRGB(0, 0, 0)
+prev.TextSize = 14.000
+
+nnext.Name = "nnext"
+nnext.Parent = help
+nnext.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+nnext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nnext.BorderSizePixel = 0
+nnext.Position = UDim2.new(0.785894215, 0, 0.938875318, 0)
+nnext.Size = UDim2.new(0, 85, 0, 25)
+nnext.Font = Enum.Font.SourceSans
+nnext.Text = "-->>"
+nnext.TextColor3 = Color3.fromRGB(0, 0, 0)
+nnext.TextSize = 14.000
+
+mini_2.Name = "mini"
+mini_2.Parent = Whoami
+mini_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mini_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+mini_2.BorderSizePixel = 0
+mini_2.Position = UDim2.new(0.663316607, 0, 0.471780032, 0)
+mini_2.Size = UDim2.new(0, 106, 0, 39)
+mini_2.Visible = false
+
+TextButton_2.Parent = mini_2
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 255, 38)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(-0.00858609192, 0, 0.0496794879, 0)
+TextButton_2.Size = UDim2.new(0, 54, 0, 34)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "+"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+-- Scripts:
+
+local function AEAWTN_fake_script() -- Frame.Main 
+	local script = Instance.new('LocalScript', Frame)
+
+	local player
+	
+	
+	
+	--frame variables
+	local f = script.Parent --
+	local ping = f.ping --
+	local yr =f.year --
+	local age = f.age --
+	local display = f.display --
+	local loc = f.country
+	local user = f.user --
+	local id = f.id --
+	local pfp = f.pfp --
+	local h = f.countryhelp --
+	
+	--game variables
+	
+	local localizationService = game:GetService("LocalizationService")
+	--\game variables
+	
+	--code
+	
+	wait(1)
+	print("loaded!!")
+	player = game.Players.LocalPlayer
+	local playerage = player.AccountAge
+	local name = player.Name
+	local playeryear = math.round((playerage/375))
+	local playerid = player.UserId
+	
+	--img
+	local thumbType = Enum.ThumbnailType.AvatarBust
+	local thumbSize = Enum.ThumbnailSize.Size150x150
+	local content = game.Players:GetUserThumbnailAsync(playerid, thumbType, thumbSize)
+	--\img
+	
+	
+	age.Text = "Age: "..playerage
+	yr.Text = "Years: "..playeryear
+	user.Text = "Username: "..name
+	display.Text = "Display: "..player.DisplayName
+	loc.Text = "Country: "..localizationService:GetCountryRegionForPlayerAsync(player)
+	id.Text = "UserId: "..playerid
+	pfp.Image = content
+	
+	
+	h.MouseButton1Up:Connect(function()
+		f.Parent.help.Visible = true
+	end)
+	
+	game.ReplicatedStorage.OpenWAI.OnClientEvent:Connect(function()
+		f.Visible = true
+	end)
+	
+	--\code
+	
+	user.Changed:Connect(function()
+		player = game.Players:FindFirstChild(user.Text)
+		local playerage = player.AccountAge
+		local name = player.Name
+		local playeryear = math.round((playerage/375))
+		local playerid = player.UserId
+		local thumbType = Enum.ThumbnailType.AvatarBust
+		local thumbSize = Enum.ThumbnailSize.Size150x150
+		local content = game.Players:GetUserThumbnailAsync(playerid, thumbType, thumbSize)
+		age.Text = "Age: "..playerage
+		yr.Text = "Years: "..playeryear
+		user.Text = "Username: "..name
+		display.Text = "Display: "..player.DisplayName
+		loc.Text = "Country: "..localizationService:GetCountryRegionForPlayerAsync(player)
+		id.Text = "UserId: "..playerid
+		pfp.Image = content
+	end)
+end
+coroutine.wrap(AEAWTN_fake_script)()
+local function KBYM_fake_script() -- Frame.Ping 
+	local script = Instance.new('LocalScript', Frame)
+
+	local player;
+	local p = script.Parent.ping
+	local localizationService = game:GetService("LocalizationService")
+	
+	wait(3)
+	
+	player = game.Players.LocalPlayer
+	
+	
+	local ping = player:GetNetworkPing()
+	p.Text = "$WAIT"
+	
+	script.Parent.user.Changed:Connect(function()
+		player = game.Players:FindFirstChild(script.Parent.user.Text)
+	end)
+	
+	while wait(1) do
+		ping = player:GetNetworkPing()
+		p.Text = "Ping: "..tostring(ping)
+	end
+	
+end
+coroutine.wrap(KBYM_fake_script)()
+local function MNMX_fake_script() -- TextButton.close 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local b = script.Parent
+	local f = b.Parent
+	
+	b.MouseButton1Up:Connect(function()
+		f.Parent:Destroy()
+	end)
+end
+coroutine.wrap(MNMX_fake_script)()
+local function KITG_fake_script() -- mini.LocalScript 
+	local script = Instance.new('LocalScript', mini)
+
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.mini.Visible = true
+	end)
+end
+coroutine.wrap(KITG_fake_script)()
+local function PWKA_fake_script() -- help.LocalScript 
+	local script = Instance.new('LocalScript', help)
+
+	local position = 1
+	
+	--pages
+	local p1 = script.Parent.p1
+	local p2 = script.Parent.p2
+	local p3 = script.Parent.p3
+	
+	--buttons
+	local skip = script.Parent.nnext
+	local prev = script.Parent.prev
+	local close = script.Parent.close
+	
+	--close function
+	close.MouseButton1Up:Connect(function()
+		script.Parent.Visible = false
+	end)
+	
+	--update page
+	local function changePage()
+		if position == 1 then
+			p1.Visible = true
+			if p2.Visible == true then
+				p2.Visible = false
+			end
+			if p3.Visible == true then
+				p3.Visible = false
+			end
+		elseif position == 2 then
+			p2.Visible = true
+			if p1.Visible == true then
+				p1.Visible = false
+			end
+			if p3.Visible == true then
+				p3.Visible = false
+			end
+		elseif position == 3 then
+			p3.Visible = true
+			if p1.Visible == true then
+				p1.Visible = false
+			end
+			if p2.Visible == true then
+				p2.Visible = false
+			end
+		end
+	end
+	
+	--cycle
+	
+	skip.MouseButton1Up:Connect(function()
+		if position == 3 then
+			position = 1
+		elseif position == 2 then
+			position = 3
+		elseif position == 1 then
+			position = 2
+		else
+			warn("cycle error(non-fatal)")
+			position = 1
+		end
+		changePage()
+	end)
+	
+	prev.MouseButton1Up:Connect(function()
+		if position == 3 then
+			position = 2
+		elseif position == 2 then
+			position = 1
+		elseif position == 1 then
+			position = 3
+		else
+			warn("cycle error(non-fatal)")
+			position = 1
+		end
+		changePage()
+	end)
+	
+end
+coroutine.wrap(PWKA_fake_script)()
+local function AQWDHS_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.Frame.Visible = true
+	end)
+end
+coroutine.wrap(AQWDHS_fake_script)()
+local function ZRNMU_fake_script() -- mini_2.DragScript 
+	local script = Instance.new('LocalScript', mini_2)
+
+	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	--Put this inside of your Frame and configure the speed if you would like.
+	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(ZRNMU_fake_script)()
